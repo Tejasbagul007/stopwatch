@@ -57,7 +57,7 @@ const Stopwatch = () => {
   const resetTimer = () => {
     clearInterval(intervalRef.current);
     setTime(0);
-    setRunning(false);
+    setRunning(false);``
     setLaps([]);
     stopRotation();
   };
