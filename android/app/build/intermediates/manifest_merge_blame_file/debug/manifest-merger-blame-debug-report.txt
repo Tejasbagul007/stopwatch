@@ -1,0 +1,246 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.newapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.125.0] /Users/tejas/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.125.0] /Users/tejas/.gradle/caches/transforms-3/03f04a3f11198ce3b7c6cedb9b41266b/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:22-73
+14
+15    <queries>
+15-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:10:5-39:15
+16        <intent>
+16-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:11:9-17:18
+17            <action android:name="android.intent.action.VIEW" />
+17-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:12:13-65
+17-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:12:21-62
+18
+19            <data
+19-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:14:13-16:38
+20                android:mimeType="*/*"
+20-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:15:17-39
+21                android:scheme="*" />
+21-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:16:17-35
+22        </intent>
+23        <intent>
+23-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:18:9-27:18
+24            <action android:name="android.intent.action.VIEW" />
+24-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:12:13-65
+24-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:12:21-62
+25
+26            <category android:name="android.intent.category.BROWSABLE" />
+26-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:21:13-74
+26-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:21:23-71
+27
+28            <data
+28-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:14:13-16:38
+29                android:host="pay"
+30                android:mimeType="*/*"
+30-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:15:17-39
+31                android:scheme="upi" />
+31-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:16:17-35
+32        </intent>
+33        <intent>
+33-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:28:9-30:18
+34            <action android:name="android.intent.action.MAIN" />
+34-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:13-65
+34-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:21-62
+35        </intent>
+36        <intent>
+36-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:31:9-35:18
+37            <action android:name="android.intent.action.SEND" />
+37-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:32:13-65
+37-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:32:21-62
+38
+39            <data android:mimeType="*/*" />
+39-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:14:13-16:38
+39-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:15:17-39
+40        </intent>
+41        <intent>
+41-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:36:9-38:18
+42            <action android:name="rzp.device_token.share" />
+42-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:37:13-61
+42-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:37:21-58
+43        </intent>
+44    </queries> <!-- Include required permissions for Google Maps API to run. -->
+45    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+45-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+45-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+46
+47    <uses-feature
+47-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+48        android:glEsVersion="0x00020000"
+48-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+49        android:required="true" />
+49-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+50
+51    <application
+51-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:6:5-25:19
+52        android:name="com.newapp.MainApplication"
+52-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:7:7-38
+53        android:allowBackup="false"
+53-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:11:7-34
+54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+54-->[androidx.core:core:1.7.0] /Users/tejas/.gradle/caches/transforms-3/63a3df243d2d102452600006144a86df/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+55        android:debuggable="true"
+56        android:icon="@mipmap/ic_launcher"
+56-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:9:7-41
+57        android:label="@string/app_name"
+57-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:8:7-39
+58        android:roundIcon="@mipmap/ic_launcher_round"
+58-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:10:7-52
+59        android:testOnly="true"
+60        android:theme="@style/AppTheme"
+60-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:12:7-38
+61        android:usesCleartextTraffic="true" >
+61-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:8:9-44
+62        <activity
+62-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:11:9-111
+63            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+63-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:11:19-83
+64            android:exported="false" />
+64-->/Users/tejas/Workspace/sagaApp-master/android/app/src/debug/AndroidManifest.xml:11:84-108
+65        <activity
+65-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:13:7-24:18
+66            android:name="com.newapp.MainActivity"
+66-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:14:9-37
+67            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+67-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:16:9-118
+68            android:exported="true"
+68-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:19:9-32
+69            android:label="@string/app_name"
+69-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:15:9-41
+70            android:launchMode="singleTask"
+70-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:17:9-40
+71            android:windowSoftInputMode="adjustResize" >
+71-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:18:9-51
+72            <intent-filter>
+72-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:20:9-23:25
+73                <action android:name="android.intent.action.MAIN" />
+73-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:13-65
+73-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:21-62
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:22:13-73
+75-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:22:23-70
+76            </intent-filter>
+77        </activity>
+78        <activity
+78-->[:react-native-razorpay] /Users/tejas/Workspace/sagaApp-master/node_modules/react-native-razorpay/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:86
+79            android:name="com.razorpay.CheckoutActivity"
+79-->[:react-native-razorpay] /Users/tejas/Workspace/sagaApp-master/node_modules/react-native-razorpay/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-57
+80            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+80-->[:react-native-razorpay] /Users/tejas/Workspace/sagaApp-master/node_modules/react-native-razorpay/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-83
+81            android:exported="true"
+81-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:54:13-36
+82            android:theme="@style/CheckoutTheme" >
+82-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:55:13-49
+83            <intent-filter>
+83-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:56:13-58:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:13-65
+84-->/Users/tejas/Workspace/sagaApp-master/android/app/src/main/AndroidManifest.xml:21:21-62
+85            </intent-filter>
+86        </activity>
+87
+88        <receiver
+88-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:42:9-49:20
+89            android:name="com.razorpay.RzpTokenReceiver"
+89-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:43:13-57
+90            android:exported="true" >
+90-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:44:13-36
+91            <intent-filter>
+91-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:46:13-48:29
+92                <action android:name="rzp.device_token.share" />
+92-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:37:13-61
+92-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:37:21-58
+93            </intent-filter>
+94        </receiver>
+95
+96        <meta-data
+96-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:61:9-63:58
+97            android:name="com.razorpay.plugin.googlepay_all"
+97-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:62:13-61
+98            android:value="com.razorpay.RzpGpayMerged" />
+98-->[com.razorpay:checkout:1.6.30] /Users/tejas/.gradle/caches/transforms-3/69e5f8a95383d158286e9b30d9203b74/transformed/jetified-checkout-1.6.30/AndroidManifest.xml:63:13-55
+99
+100        <activity
+100-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+101            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+101-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+102            android:excludeFromRecents="true"
+102-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+103            android:exported="false"
+103-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+104            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+104-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+105        <!--
+106            Service handling Google Sign-In user revocation. For apps that do not integrate with
+107            Google Sign-In, this service will never be started.
+108        -->
+109        <service
+109-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+110            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+110-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+111            android:exported="true"
+111-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+112            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" /> <!-- Needs to be explicitly declared on P+ -->
+112-->[com.google.android.gms:play-services-auth:17.0.0] /Users/tejas/.gradle/caches/transforms-3/8fb435529e432a6771762efad78feaab/transformed/jetified-play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+113        <uses-library
+113-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+114            android:name="org.apache.http.legacy"
+114-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+115            android:required="false" />
+115-->[com.google.android.gms:play-services-maps:17.0.0] /Users/tejas/.gradle/caches/transforms-3/7610e22b72ff83ba4615f47eef3a58fb/transformed/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+116
+117        <activity
+117-->[com.google.android.gms:play-services-base:17.5.0] /Users/tejas/.gradle/caches/transforms-3/6b232164a3c43e15684b0da94070d182/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:23:9-26:75
+118            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+118-->[com.google.android.gms:play-services-base:17.5.0] /Users/tejas/.gradle/caches/transforms-3/6b232164a3c43e15684b0da94070d182/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:24:13-79
+119            android:exported="false"
+119-->[com.google.android.gms:play-services-base:17.5.0] /Users/tejas/.gradle/caches/transforms-3/6b232164a3c43e15684b0da94070d182/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:25:13-37
+120            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+120-->[com.google.android.gms:play-services-base:17.5.0] /Users/tejas/.gradle/caches/transforms-3/6b232164a3c43e15684b0da94070d182/transformed/jetified-play-services-base-17.5.0/AndroidManifest.xml:26:13-72
+121
+122        <meta-data
+122-->[com.google.android.gms:play-services-basement:17.6.0] /Users/tejas/.gradle/caches/transforms-3/03468a638f098ffe87531554bfca6ff7/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:23:9-25:69
+123            android:name="com.google.android.gms.version"
+123-->[com.google.android.gms:play-services-basement:17.6.0] /Users/tejas/.gradle/caches/transforms-3/03468a638f098ffe87531554bfca6ff7/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:24:13-58
+124            android:value="@integer/google_play_services_version" />
+124-->[com.google.android.gms:play-services-basement:17.6.0] /Users/tejas/.gradle/caches/transforms-3/03468a638f098ffe87531554bfca6ff7/transformed/jetified-play-services-basement-17.6.0/AndroidManifest.xml:25:13-66
+125
+126        <provider
+126-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+127            android:name="androidx.startup.InitializationProvider"
+127-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+128            android:authorities="com.newapp.androidx-startup"
+128-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+129            android:exported="false" >
+129-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+130            <meta-data
+130-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+131                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+131-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+132                android:value="androidx.startup" />
+132-->[androidx.emoji2:emoji2:1.0.0] /Users/tejas/.gradle/caches/transforms-3/b6fe4da57007a43d86a66ba4c66459bd/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+133            <meta-data
+133-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/tejas/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+134                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+134-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/tejas/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+135                android:value="androidx.startup" />
+135-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/tejas/.gradle/caches/transforms-3/bc74a39e1ea23fea00bfcf2682a93948/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+136        </provider>
+137    </application>
+138
+139</manifest>

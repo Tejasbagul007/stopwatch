@@ -1,0 +1,368 @@
+import React, {useState, useRef, useEffect} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  SafeAreaView,
+  Animated,
+  Easing,
+  PanResponder,
+  Image,
+} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+//CUSTOM IMPORTS
+import { images } from './resource/images';
+import styles from './stopwatchStyle';
+
+
+const Stopwatch = () => {
+  const [time, setTime] = useState(0);
+  const [running, setRunning] = useState(false); // initialy --> not running
+  const [laps, setLaps] = useState([]);
+  const intervalRef = useRef(null); // useRef need to use in interval cases
+  const [isStopwatchRunning, setIsStopwatchRunning] = useState(false);
+  const animatedValue = useRef(new Animated.Value(0)).current;
+  const [currentRotation, setCurrentRotation] = useState(0);
+
+  // const rotateAnimation = useRef(null);
+
+  //  let Interval = intervalRef.current;
+
+  const startStopwatch = () => {
+    if (running) {
+      // If the stopwatch is running
+      clearInterval(intervalRef.current);
+    } else {
+      const startTime = Date.now() - time; // If the stopwatch is not running---> to get exact start time
+      intervalRef.current = setInterval(() => {
+        setTime(Date.now() - startTime);
+      }, 10);
+    }
+    setRunning(!running); // Toggle--> state is updated when starting or stopping the stopwatch.
+    // setRunning('');
+    setIsStopwatchRunning(!isStopwatchRunning);
+    setCurrentRotation(animated.__getValue());
+
+  };
+
+  const lapTimer = () => {
+    if (running) {
+       setLaps([...laps, time]); // ref to time for new laps
+      // console.log("call")
+    // const lapTime = Date.now();
+    // const prevLapTime = laps.length > 0 ? laps[laps.length - 1].lapTime : 0;
+    // const lapDuration = lapTime - prevLapTime;
+    // const lapData = { lapTime, duration: lapDuration };
+    // setLaps([...laps, lapData]);
+    }
+  };
+
+  const resetTimer = () => {
+    clearInterval(intervalRef.current);
+    setTime(0);
+    setRunning(false);
+    // setLaps();
+    setLaps([]);
+  };
+
+  const showTime = (time) => {
+    // const hours = Math.floor(time / 360000);
+    // 360000msec / 6000msec for min
+    // 1 minute = 60 seconds * 1,000 milliseconds/second = 60,000 milliseconds
+    const mins = Math.floor(time / 60000); // 60000msec to get min calculation
+    const secs = Math.floor((time % 60000) / 1000); // same
+    const millisecs = Math.floor((time % 1000) / 10);
+
+    return (
+      <Text>
+        <Text style={styles.whiteText}>{mins < 10 ? '0' + mins : mins}:</Text>
+        <Text style={styles.whiteText2}>{secs < 10 ? '0' + secs : secs}.</Text>
+        <Text style={styles.blueText}>{millisecs < 10 ? '0' + millisecs : millisecs}</Text>
+      </Text>
+    );
+  };
+
+
+  const animated = useRef(new Animated.Value(0)).current;
+  const rotate = animated.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  });
+  const rotateOpposit = animated.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '-360deg'],
+  });
+
+
+  const animate = () => {
+    if (!isStopwatchRunning) {
+      startRotation();
+    }
+    animated.setValue(currentRotation);
+    Animated.loop(
+      Animated.timing(animated, {
+        toValue: 1,
+        duration: 8000,
+        useNativeDriver: true,
+        easing: Easing.linear,
+      },[])
+    ).start(() => {
+      animate(); // Recursive call to restart the animation
+    });
+  };
+
+
+  useEffect(() => {
+    animate();
+    setCurrentRotation(animated.__getValue());
+  }, [!isStopwatchRunning]);
+
+
+  // const startRotation = () => {
+  //   rotateAnimation.current = Animated.timing(animatedValue, {
+  //     toValue: 1,
+  //     duration: 4000,
+  //     useNativeDriver: true,
+  //     easing: Easing.linear,
+  //   });
+  //   Animated.loop(rotateAnimation.current).start();
+  // };
+
+  // const stopRotation = () => {
+  //   if (rotateAnimation.current) {
+  //     rotateAnimation.current.stop();
+  //     rotateAnimation.current = null;
+  //     animatedValue.setValue(0);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (!isStopwatchRunning) {
+  //     startRotation();
+  //   } else {
+  //     stopRotation();
+  //   }
+  // }, [isStopwatchRunning]);
+
+
+  const startRotation = () => {
+    Animated.loop(
+      Animated.timing(animatedValue, {
+        toValue: 1,
+        duration: 4000,
+        useNativeDriver: true,
+        easing: Easing.linear,
+      })
+    ).start();
+  };
+
+  const stopRotation = () => {
+    animated.stopAnimation();
+    animated.setValue(0);
+  };
+
+  useEffect(() => {
+    if (isStopwatchRunning) {
+      startRotation();
+    } else {
+      stopRotation();
+    }
+  }, [isStopwatchRunning]);
+
+
+
+  // const animate = () => {
+  //   if (isStopwatchRunning) {
+  //     startRotation();
+  //   }
+  // };
+
+  const panResponder = useRef(
+    PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onPanResponderGrant: () => {
+        if (isStopwatchRunning) {
+          // Handle the event when pointer is moved inside the circle
+          console.log('Pointer moved inside the circle');
+        }
+      },
+    })
+  ).current;
+
+  return (
+    <SafeAreaView>
+      <View style={styles.container}>
+        <View style={styles.timerContainer}>
+        <Animated.View style={[styles.item, { transform: [{ rotate: rotate },
+                     { translateY: wp('10%') }, // Adjust the X-axis translation value
+                    { translateX: -wp('20%') }] }]}>
+        <Animated.View style={[styles.dot, { transform: [{ rotate: rotateOpposit }] }]}
+         {...panResponder.panHandlers}>
+          <Text style={styles.dotText}>.</Text>
+        </Animated.View>
+      </Animated.View>
+          <Text style={styles.time}>{showTime(time)}</Text>
+        </View>
+
+        <ScrollView style={styles.lapContainer}>
+          {laps.map((lap, e) => (
+            <View key={e} style={styles.lapText}>
+              <Text style={styles.blueText}>0{e + 1}</Text>
+              <Text>{showTime(lap)}</Text>
+
+              {/* {e > 0 && (
+                <Text
+                  style={
+                    lap.duration >= 0
+                      ? styles.positiveText
+                      : styles.negativeText
+                  }>
+                  {lap.duration >= 0 ? '+' : '-'}
+                  {showTime(Math.abs(lap.duration))}
+                </Text>
+              )} */}
+
+            </View>
+          ))}
+        </ScrollView>
+      </View>
+      <View style={styles.buttons}>
+        <TouchableOpacity style={styles.button} onPress={resetTimer}>
+          <Image
+            source={images.reset}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={startStopwatch}>
+          <Image
+            source={running ? images.pause : images.play}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={lapTimer}
+          disabled={!running}>
+          <Image
+            source={images.flag}
+          />
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Stopwatch;
+
+
+-----------------------------css-------------------------
+
+import {StyleSheet} from 'react-native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+
+//CUSTOM IMPORTS
+import {colors} from './resource/colors';
+
+ const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  app: {
+    flex: 1,
+    backgroundColor: colors.faintBlack,
+  },
+  timerContainer: {
+    // flex: 1,
+    marginTop: hp('10%'),
+    borderWidth: wp('0.9%'),
+    borderColor: colors.grey,
+    borderStyle: 'dotted',
+    width: wp('68%'),
+    height: hp('33%'),
+    borderRadius: wp('66%') / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  time: {
+    fontSize: wp('10%'),
+    color: 'white',
+    fontWeight: 'bold',
+    marginBottom: hp('1%'),
+  },
+  buttons: {
+    // flex: 1,
+    position: 'absolute',
+    marginTop: hp('86%'),
+    marginBottom: hp('30%'),
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'scroll',
+  },
+  button: {
+    padding: wp('4%'),
+    marginRight: wp('8%'),
+    marginLeft: wp('8%'),
+  },
+  lapContainer: {
+    overflow: 'hidden',
+    marginTop: wp('8%'),
+  },
+  lapText: {
+    fontSize: wp('4%'),
+    overflow: 'hidden',
+    marginBottom: wp('5%'),
+    color: colors.white,
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  blueText: {
+    color: colors.blue,
+    marginRight: wp('48%'),
+    overflow: 'hidden',
+  },
+  whiteText: {
+    color: colors.white,
+    marginRight: wp('48%'),
+  },
+  whiteText2: {
+    color: colors.white,
+  },
+  // positiveText: {
+  //   color: 'green',
+  //   marginLeft: wp('2%'),
+  // },
+  // negativeText: {
+  //   color: 'red',
+  //   marginLeft: wp('2%'),
+  // },
+  item: {
+    position: 'absolute',
+    width: wp('10%'),
+  },
+  dot: {
+    width: wp('5%'),
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dotText: {
+    marginLeft: wp('18%'),
+    marginBottom: wp('7%'),
+    width: wp('20%'),
+    fontSize: wp('13%'),
+    color: colors.blue,
+  },
+});
+
+export default styles;

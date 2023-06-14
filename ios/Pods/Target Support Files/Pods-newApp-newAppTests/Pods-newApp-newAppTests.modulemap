@@ -1,0 +1,6 @@
+module Pods_newApp_newAppTests {
+  umbrella header "Pods-newApp-newAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
